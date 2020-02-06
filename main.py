@@ -29,7 +29,7 @@ quoter = BashImQuoter()
 
 @dp.request_handler()
 async def handle_all_requests(alice_request):
-    return alice_request.response(quoter.get_random_quote())
+    return alice_request.response(quoter.get_random_quote(), end_session=True)
 
 
 if __name__ == '__main__':

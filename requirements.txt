@@ -1,2 +1,2 @@
-aioalice>=1.2.5
+git+git://github.com/hackruu/aioalice
 aiohttp>=3.6.2
