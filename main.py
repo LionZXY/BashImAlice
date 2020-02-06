@@ -5,10 +5,10 @@ from aiohttp import web
 from aioalice import Dispatcher, get_new_configured_app
 
 DB_FILE = 'quotes.sqlite3'
-WEBHOOK_URL_PATH = '/quote/'  # webhook endpoint
+WEBHOOK_URL_PATH = '/'  # webhook endpoint
 
 WEBAPP_HOST = 'localhost'
-WEBAPP_PORT = 3001
+WEBAPP_PORT = 8301
 
 
 class BashImQuoter:
