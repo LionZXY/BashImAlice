@@ -1,2 +1,2 @@
-git+git://github.com/LionZXY/aioalice
+aioalice>=1.3.0
 aiohttp>=3.6.2
