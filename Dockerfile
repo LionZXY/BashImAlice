@@ -7,4 +7,7 @@ RUN pip install -r requirements.txt
 
 COPY main.py main.py
 COPY quotes.sqlite3 quotes.sqlite3
+
+EXPOSE 8080
+
 CMD python3 main.py

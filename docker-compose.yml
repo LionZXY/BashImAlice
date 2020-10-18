@@ -1,10 +1,16 @@
 version: "3.8"
 
+networks:
+  traefik-proxy:
+    external: true
+
 services:
   aio_bash_im:
     build: .
     container_name: aio_bash_im
     restart: unless-stopped
+    networks:
+      - traefik-proxy
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.aiobashim.entrypoints=http"
