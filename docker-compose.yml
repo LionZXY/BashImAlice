@@ -6,6 +6,7 @@ services:
     container_name: aio_bash_im
     restart: unless-stopped
     labels:
+      - "org.label-schema.group=apps"
       - "traefik.enable=true"
       - "traefik.http.routers.aiobashim.entrypoints=http"
       - "traefik.http.routers.aiobashim.rule=Host(`aiobashim.lionzxy.ru`)"
