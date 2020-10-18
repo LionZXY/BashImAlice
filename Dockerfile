@@ -6,4 +6,5 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 COPY main.py main.py
+COPY quotes.sqlite3 quotes.sqlite3
 CMD python3 main.py
