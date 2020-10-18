@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  psybot:
+  aio_bash_im:
     build: .
     container_name: aio_bash_im
     restart: unless-stopped
@@ -16,5 +16,5 @@ services:
       - "traefik.http.routers.aiobashim-secure.tls=true"
       - "traefik.http.routers.aiobashim-secure.tls.certresolver=http"
       - "traefik.http.routers.aiobashim-secure.service=aiobashim"
-      - "traefik.http.services.aiobashim.loadbalancer.server.port=8301"
+      - "traefik.http.services.aiobashim.loadbalancer.server.port=8080"
       - "traefik.docker.network=traefik-proxy"

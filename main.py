@@ -7,9 +7,6 @@ from aioalice import Dispatcher, get_new_configured_app
 DB_FILE = 'quotes.sqlite3'
 WEBHOOK_URL_PATH = '/'  # webhook endpoint
 
-WEBAPP_HOST = 'localhost'
-WEBAPP_PORT = 8301
-
 
 class BashImQuoter:
     def __init__(self):
@@ -31,6 +28,7 @@ quoter = BashImQuoter()
 async def handle_all_requests(alice_request):
     return alice_request.response(quoter.get_random_quote(), end_session=True)
 
+
 if __name__ == '__main__':
     app = get_new_configured_app(dispatcher=dp, path=WEBHOOK_URL_PATH)
-    web.run_app(app, host=WEBAPP_HOST, port=WEBAPP_PORT)
+    web.run_app(app)
